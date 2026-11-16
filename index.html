@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mara</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+	--paper: #f5f9f8;
+	--card: #ffffff;
+	--ink: #14211f;
+	--muted: #51625f;
+	--line: #d6e3e0;
+	--teal: #0f766e;
+	--teal-ink: #0b5c56;
+	--teal-soft: #dcefeb;
+	--amber-soft: #fbefd9;
+	--amber: #9a5b06;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--paper: #0f1514;
+		--card: #161e1c;
+		--ink: #e5eeec;
+		--muted: #9bb0ac;
+		--line: #26332f;
+		--teal: #2cc0ad;
+		--teal-ink: #7fded1;
+		--teal-soft: #10302b;
+		--amber-soft: #3a2a10;
+		--amber: #f0b45a;
+		color-scheme: dark;
+	}
+}
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	padding: 0 16px 56px;
+	background: var(--paper);
+	color: var(--ink);
+	font: 17px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; }
+a { color: var(--teal-ink); }
+header { padding: 48px 0 20px; }
+.eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--teal-ink); }
+h1 { font-size: clamp(40px, 8vw, 64px); line-height: 1.02; margin: 6px 0 12px; letter-spacing: -.02em; }
+h1 span { color: var(--teal); }
+.lede { font-size: 19px; color: var(--muted); margin: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 8px; }
+.button {
+	display: inline-flex; align-items: center; gap: 10px;
+	padding: 12px 20px; border-radius: 12px;
+	background: var(--teal); color: var(--paper);
+	font-weight: 700; font-size: 18px; text-decoration: none;
+}
+.button.secondary { background: var(--teal-soft); color: var(--teal-ink); }
+.button small { font-weight: 400; font-size: 14px; opacity: .85; }
+.fine { font-size: 14.5px; color: var(--muted); }
+h2 { font-size: 27px; line-height: 1.15; margin: 40px 0 10px; }
+ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 14px 0; display: grid; gap: 12px; }
+ol.steps > li {
+	counter-increment: step;
+	position: relative;
+	padding: 14px 16px 14px 60px;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	background: var(--card);
+}
+ol.steps > li::before {
+	content: counter(step);
+	position: absolute; left: 16px; top: 14px;
+	width: 30px; height: 30px; border-radius: 50%;
+	background: var(--teal); color: var(--paper);
+	font-weight: 700; display: grid; place-items: center;
+}
+ol.steps b { display: block; }
+.note { padding: 12px 16px; border-radius: 10px; background: var(--teal-soft); margin: 14px 0; }
+.note.warn { background: var(--amber-soft); }
+.note.warn b:first-child { color: var(--amber); }
+code { font-size: .92em; padding: 1px 6px; border-radius: 6px; background: var(--teal-soft); }
+footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+	<header>
+		<div class="eyebrow">Per a Windows · d'ús privat</div>
+		<h1>Mara <span>🐾</span></h1>
+		<p class="lede">El Zotero de sempre amb una ajudant a dins, la Coco: resumeix articles en català, respon preguntes citant les pàgines, busca a PubMed i compara articles en una taula.</p>
+		<div class="actions">
+			<a class="button" href="https://github.com/chismeh32-jpg/dist/releases/latest/download/Mara-Setup.exe">Descarrega la Mara <small>Windows · 110 MB</small></a>
+			<a class="button secondary" href="https://github.com/chismeh32-jpg/dist/releases/latest/download/Guia-Mara.pdf">Guia d'ús (PDF)</a>
+		</div>
+		<p class="fine">Sempre la versió més nova. Per instal·lar-la necessites el <b>codi personal</b> que t'han donat (com ara <code>MARA-XXXX-XXXX</code>).</p>
+	</header>
+
+	<h2>Instal·lar-la</h2>
+	<ol class="steps">
+		<li><b>Obre el fitxer descarregat, Mara-Setup.exe.</b>Si Windows diu que <i>ha protegit l'ordinador</i>, prem «Més informació» i després «Executa igualment». Surt perquè l'instal·lador no és d'una empresa coneguda.</li>
+		<li><b>Prem «Endavant» i escriu el teu codi.</b>No importen les majúscules ni els guions. No calen permisos d'administrador.</li>
+		<li><b>Prem «Instal·la» i després «Finalitza».</b>Si ja feies servir el Zotero, la Mara obre la mateixa biblioteca (abans en fa una còpia de seguretat).</li>
+	</ol>
+	<div class="note"><b>Les actualitzacions són automàtiques.</b> Quan surti una versió nova, la Mara t'avisarà en obrir-se; no cal tornar a descarregar res ni posar el codi.</div>
+
+	<h2>Configurar la Coco: una clau gratuïta de Gemini</h2>
+	<p>La Coco funciona amb Gemini, la IA de Google. Cada persona fa servir <b>la seva pròpia clau</b>, gratuïta. La primera vegada que obris la Mara, t'hi guiarà pas a pas. Són aquests:</p>
+	<ol class="steps">
+		<li><b>Obre <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a></b>i entra amb el teu compte de Google. Si et demana acceptar les condicions, accepta-les.</li>
+		<li><b>Prem «Create API key».</b>Si et pregunta per un projecte, tria el que et proposi o crea'n un de nou amb qualsevol nom.</li>
+		<li><b>Copia la clau (comença per «AIza…») i enganxa-la a la Mara.</b>Prem «Desa i prova». Quan surti «La Coco ja està a punt!», ja està.</li>
+	</ol>
+	<div class="note warn"><b>No activis la facturació («billing») ni hi posis cap targeta.</b> Així la clau és gratuïta i Google no et cobrarà mai res. La versió gratuïta té un límit diari: si un dia s'hi arriba, l'endemà torna a funcionar.</div>
+	<p class="fine">La clau es guarda només al teu ordinador. No la comparteixis: és com una contrasenya.</p>
+
+	<h2>I després?</h2>
+	<p>La <a href="https://github.com/chismeh32-jpg/dist/releases/latest/download/Guia-Mara.pdf">guia en PDF</a> explica totes les eines amb captures: resums, preguntes a un o a molts articles, cerca d'articles, taules comparatives, revisar les teves cites, estudiar i compartir llistes d'articles amb les companyes.</p>
+
+	<footer>Mara és un programa d'ús privat basat en el Zotero (programari lliure, llicència AGPL).</footer>
+</main>
+</body>
+</html>
